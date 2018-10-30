@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
+	div {
+		/*border: 1px solid #000;*/
+	}
+
+	.row {
+		position: relative;
+		height: 550px;
+		padding: 99px;
+		text-align: center;
+		display: block;
+		font-size: 0;
+	}
+
+	#background {
+		overflow: auto;
+		position: absolute;
+	}
+
+	#background:before {
+		content: "";
+		position: fixed;
+		left: -1%;
+		right: -1%;
+		top: -1%;
+		bottom: -1%;
+		z-index: -1;
+
+		display: block;
+		background-image: url("pexels-photo-206359.jpeg");
+		background-size: cover;
+		width: 102%;
+		height: 102%;
+
+		-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px);
+		-ms-filter: blur(5px);
+		filter: blur(15px);
+	}
+
+	.small {
+		position: relative;
+		display: inline-block;
+		width: 20%;
+		height: 62%;
+		vertical-align: middle;
+		background-size: cover;
+		background-image: url("pexels-photo-206359.jpeg");
+	}
+
+	.large {
+		display: inline-block;
+		width: 35%;
+		height: 70%;
+		vertical-align: middle;
+		font-size: 12px;
+		background-color: white;
+	}
+
+	#sub {
+		padding-left: 20px;
+		border: none;
+		text-align: left;
+		font-size: 30px;
+		font-family: 'Work Sans', sans-serif;
+		/*font-weight: bold;*/
+		color: white;
+	}
+
+	#policy {
+		position: absolute;
+		padding-left: 20px;
+		border: none;
+		text-align: left;
+		font-size: 10px;
+		font-family: 'Work Sans', sans-serif;
+		/*font-weight: bold;*/
+		color: white;
+		vertical-align: bottom;
+		bottom: 0;
+	}
+
+	/*RESOURCES*/
+	/*https://stackoverflow.com/questions/36565602/css-remove-background-faded-edges*/
+	</style>
+  </head>
+	<body>
+		<div class="row">
+			<div id="background"></div>
+			<div class="small">
+				<div id="sub">
+					<p>Sign Up</p>
+				</div>
+				<div id="policy">
+					<p>Privacy policy &amp; terms of service</p>
+				</div>
+			</div>
+			<div class="large">
+				<form action="/action_page.php">
+					First name:<br>
+					<input type="text" name="firstname" value="Mickey">
+					<br>Last name:<br>
+					<input type="text" name="lastname" value="Mouse">
+					<br>Password:<br>
+					<input type="text" name="password" value="">
+					<br>
+					<br>REPEAT PASSWORD:<br>
+					<input type="text" name="repeat_password" value="">
+					<br><br>
+					<input type="submit" value="Submit">
+				</form> 
+			</div>
+		</div>
+	</body>
+</html>
